@@ -21,7 +21,7 @@ from urllib.parse import urlparse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import perception as P            # noqa: E402
 from action import Hand, describe  # noqa: E402
-from transition import Mind       # noqa: E402
+from transition import Mind, RoleModel  # noqa: E402
 
 COLOR_MAP = {
     0: "#FFFFFF", 1: "#CCCCCC", 2: "#999999", 3: "#666666",
@@ -43,6 +43,8 @@ class Session:
         self.game = game
         self.hand = Hand(game)
         self.mind = Mind()
+        self.rolemodel = RoleModel()   # davranistan ROL cikarimi
+        self.grid_area = 64 * 64
         self.tried = set()             # denenmis basit aksiyonlar
         self.clicked_shapes = set()    # TIKLANMIS sekil-tokenlari (merak icin)
         self.boring = set()            # YENI olay uretmeyen konum kovalari (tekrarlama)
@@ -157,7 +159,19 @@ class Session:
             obs = self.hand.act(action)
             touched = None
         after = obs["grid"]
+        # ROL: aksiyon oncesi grid'deki kumeler (present)
+        present = {}
+        for ob in P.find_objects(before):
+            k = self.mind.shapes.cluster_of(self.mind.shapes.token(ob))
+            present[k] = present.get(k, 0) + ob.size
         res = self.mind.observe(action, label, before, after)
+        leveled_now = obs["levels_completed"] > self.prev_level
+        cev = []
+        for c in res["changes"]:
+            cb = self.mind.shapes.cluster_of(self.mind.shapes.token(c["before"])) if c["before"] is not None else -1
+            ca = self.mind.shapes.cluster_of(self.mind.shapes.token(c["after"])) if c["after"] is not None else -1
+            cev.append((cb, ca, c["effect"]))
+        self.rolemodel.update(action, cev, present, self.grid_area, leveled_now)
         # ust-duzey: seviye gecildi / WIN -> token
         if obs["levels_completed"] > self.prev_level or obs["state"] == "WIN":
             gt, gyeni = self.mind.record_goal(action, label)
@@ -224,6 +238,7 @@ class Session:
             "eye": self.mind.eye_tokens(o["grid"]),
             "hand": self.last_hand,
             "brain": self.mind.event_table(),
+            "roles": self.rolemodel.table(self.grid_area),
             "adim": self.mind.step,
         }
 
@@ -298,13 +313,17 @@ function render(s){
  for(let y=0;y<n;y++)for(let x=0;x<g[y].length;x++){const v=g[y][x];const c=document.createElement('div');c.className='cell';c.style.background=COLORS[v]||'#f0f';c.textContent=v;c.style.color=lum(COLORS[v])>0.55?'rgba(0,0,0,.7)':'rgba(255,255,255,.8)';c.onclick=()=>act(6,x,y);b.appendChild(c);}
  // eye — her sekil bir TOKEN (sayi) + gorsel numune
  const e=s.eye;const eb=document.getElementById('eyebody');
+ const rolMap={};(s.roles||[]).forEach(r=>rolMap[r.kume]=r.rol);
+ const rolRenk={'arka plan':'#6b7688','sayac':'#FFDC00','kargo':'#4FCC30','hareketli':'#1E93FF','hedef':'#F93C31','secilebilir':'#A356D6','statik (yol/duvar)':'#88D8F1','belirsiz':'#555'};
  eb.innerHTML=`<div class="badge">arka plan ${e.bg} · ${e.n} nesne · ${e.kume_sayisi} küme</div>`;
  e.sekiller.forEach(sk=>{
    const row=document.createElement('div');row.className='grp';
    const cv=document.createElement('canvas');drawShape(cv,sk.mask,sk.h,sk.w,COLORS[sk.renkler[0]]);
    const txt=document.createElement('div');txt.style.fontSize='11px';
-   txt.innerHTML=`<b style="color:#7CFC9E">küme K${sk.token}</b> · <b>${sk.adet} nesne</b>`
-     +` · <span style="color:#88D8F1">${sk.ornek_sayisi} token</span>`
+   const rol=rolMap[sk.token];
+   const rolet=rol?` <span style="background:${rolRenk[rol]||'#333'};color:#000;padding:1px 5px;border-radius:4px;font-weight:700">${rol}</span>`:'';
+   txt.innerHTML=`<b style="color:#7CFC9E">K${sk.token}</b>${rolet} · <b>${sk.adet}</b>`
+     +` · <span style="color:#88D8F1">${sk.ornek_sayisi} tk</span>`
      +`<br><span class="muted">${sk.h}×${sk.w} · ${sk.boyut}px · renk ${sk.renkler.join(',')}</span>`;
    row.appendChild(cv);row.appendChild(txt);eb.appendChild(row);
  });
