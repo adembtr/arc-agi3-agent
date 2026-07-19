@@ -1,0 +1,32 @@
+===== SEVIYE 1 =====
+1- ortada düz bir sütün var , sol tarafta 3 tayat e dikey bloktan oluşan bir şekil var sağ tarafta o şeklin ayna görüntüsü var sonra soldaki siyah ve içinde beyaz noktalar var en aşağıda ise bu iki şşekle benzeyen sarı bir şekil var bu şekil sağdak ile aynı yönde ve tam üst üste oturuyor o zmn bunu oraya taşımalıyım 
+2- [A6@24,18] 
+3- [A6@52,47] 
+4- şekillere tıkladım ve bir şey olmadı 
+5- [A1] bu tuş şekli yukarı götürdü hemde sütünün sol ve sağında olan iki şekli aynı anda en aşağıda olan sarı şekil hiç hareket etmedi
+6- [A2] bu hareket iki şekli aşağıya hareket ettirdi
+7- [A3] bu hareket iki şekli ortadaki sütündan uzaklaştırdı 
+8- şekiller hareket ediyor o zmn bence sağdaki şekli taşıyıp sarı şeklin üzerine getiricem. 
+9- [A2] 
+10- [A2] 
+11- [A2] 
+12- [A2] 
+13- [A2] 
+14- [A2] 
+15- [A2] 
+16- [A2] 
+17- [A2] 
+18- [A2] 
+19- şimdi sarı şekil gri şekilden daha uzakta yani sütünden daha uzakta o zmn griyi de sütünden uzaklaştırıp sarı şeklin üzerine getirmem gerekiyor. 
+20- [A3] 
+21- [A3] 
+22- [A3] 
+23- [A3] 
+üzerine gelid ve kazandım.
+
+
+
+===== SEVIYE 2 =====
+24- [A2] 
+25- [A4]
+26- ortada 3 şekil var ve bir sütün arka plan mavi renkli , sütünün solunda olan iki şekil birbiri ile aynı sağdaki ise onların ayna görüntüsü. sağdaki siyah şeklin üzerinde noktalar var ve ortadaki beyaz şeklin üzeirnde de noktalar var beyaz sütünün üzerinde . önceki oyunda 

@@ -1,0 +1,282 @@
+===== SEVIYE 1 =====
+1- mavi(10) arka plan var ve ortada bir şekil var bu şeklin içinde kareler var yatayda 3 sütünda 7 tane bu şekilde kareler var ve karelerin içinde yeşil(14) renkli şekiller var 
+2- [A6@36,20] 
+3- [A6@56,9] ekrana tıkladım ve bir şey olmadı o zmn diğer tuşları deneyeyim. 
+4- [A1] 
+5- [A2] 
+6- [A3] 
+7- [A4] 
+8- [A5] sırayla tüm tuşlara bsatım bir tek bu tuş işe yaradı ve yeşil(14) şekiller  (2) renge dönüştü 
+9- en aşşağıda bir şekil belirdi içinde kare -0 renkli bir kare var 4 px den oluşuyor onun etrafında -5 lerden oluşan bir şekil var o ikisi birbirini kare tamamlıyor onunetrafında da 15 lerden oluşan bir şekil var ve bu aşağıya uzatıyor şekli sonra onun etrafında tek px li 5 lerden oluşan bir şekil var 
+10- [A5] 
+11- [A6@7,55] 
+12- [A5] 
+13- [A5] 
+14- [A6@28,50] 
+15- [A6@6,58] 
+16- [A5] 
+17- [A6@42,37] aşağıdaki şekle basıınca kayboluyor sonra tekrar aciton 5 e tıklayınca geri geliyor
+18- [A7] 
+19- [A6@41,36] 
+20- [A6@10,57] 
+21- [A7] 
+22- [A5] 
+23- [A5] 
+24- [A5] 
+25- [A3] 
+26- [A2] 
+27- [A1] 
+28- [A4] 
+29- [A5] 
+30- [A6@8,56] 
+31- [A5] 
+32- [A6@43,36] 
+33- [A6@42,44] 
+34- [A5] 
+35- [A6@8,56] 
+36- [A6@42,38] 
+37- [A6@39,38] 
+38- [A6@36,36] 
+39- [A6@36,51] 
+40- [A6@47,52] 
+41- [A5] 
+42- [A6@6,56] 
+43- [A5] 
+44- [A6@7,56] 
+45- [A5] 
+46- [A6@11,61] 
+47- [A5] 
+48- [A6@12,48] 
+49- [A6@36,31] 
+50- [A6@42,49] 
+51- [A5] 
+52- [A6@25,3] 
+53- [A7] 
+54- [A7] 
+55- [A5] 
+56- [A6@11,56] 
+57- [A4] 
+58- [A3] 
+59- [A2] 
+60- [A1] 
+61- [A5] 
+62- [A6@11,56] 
+63- [A5] 
+64- [A6@42,37] 
+65- [A6@42,43] 
+66- [A5] 
+67- [A5] yok anlamıyorum 
+68- [A5]  e basınca geliyor şekle basınca gidiyor ne işe yaradığını çzemedim. 
+69- [A0] 
+70- [A5] 
+71- [A6@9,56] 
+72- [A5] 
+73- [A6@19,21] 
+74- [A6@7,56] 
+75- [A5] en baştaki şekle tıklayınca birden rengi değişti sonra tekrar aşağıdakine tıklayınca kayboldu tekrar denicem. 
+76- [A6@9,57] 
+77- [A6@19,20] 
+78- [A6@31,19] en baştaki şekle basınca başka bir yer gri (2) renge döndü tekrar orayaaa ıklayınca en baştaki şekil oraya taşındı. 
+79- [A6@31,20] yine en baştakine tıklayınca onun etrafı gri(3) renge döndü o zmn ben onu seçtim yani ona birşeyler yapabilirim. tam ortada daha önce olmayan bir renk belirdi (2) bu önceden yoktu ben şekle tıklayınca oluştu o zaman buna tıklicam az önce aynı şekilde diğer şekli de taşımıştım bunu da taşıyacağım. 
+80- [A6@42,19] iki yeşil(14) şekil kayboldu ve tıkladığım yerde bir yeşil(14) şekil oluştu daha önce 5 tane vardı 3 e indi sayı. 
+81- [A6@42,19] yeni oluaşn yeşil-14 şekle tıklayınca o seçildi ( seçildiğini etrafı gri-3 olunca anladım) ve aşağıda bir yer gri-2 oldu o zmn oraya tıklayıp daha önceki gibi onu da oraya taşıma gerekiyor. ama daha önce iki yeş,l şekil birleşmişti o zaman bu iki yeşil-14 şekilde birleşmeli ve gri-2 yerde oluşmalı. acaba 5 e tıklayınca en aşağıda duran şekil ne oldu gerçi o dursun bunu bitireyim ona gidicem. 
+82- [A6@41,31] dediğim gibi oldu iki yeşiil-14 şekil birleşti ve tek yeşil-14 şekil oldu şimdi üstekine tıklicam ve ikisi en aşağıda birleşicek. 
+83- [A6@41,31] 
+84- [A6@42,43] 
+85- birleşti ve oyun bitti demekki amaç tüm yeşilleri birleştirmek miş. action-5 e basınca ortaya çıkan şekil boşmuş . kafa karıştırmak için yapmışlar.
+
+
+
+===== SEVIYE 2 =====
+1-ortada 3 büyük şekil var en üsteki şekil en büyüğü ve iiçinde 4*4 olacak şekilde 21 kare var . ve 4 tane karenin ortasında yeşil-14 şekiller var sonra ortadaki büyük şeklin rengi biraz değişik en ortada turuncu-12 kare şekil var onun çevresini sarı-11 rengi kaplıyor onun etrafını siyah-5 rengi kaplıyor ve en üsteki büyük şekil ile bu büyük şekil siyah-5 bir yol ile birbirine bağlı sonra en alttaki büüyk şekil de en üsteki büyük şekle benziyor ortasında 4*4 4 tane gri-1 kare var ve bir tanesinin içi yeşiil-14  ve tüm büyük şekillerin sağ ve alt etraflarında mavi-9 bir şekil var . şindi en üsteki şekilde iki yeşil-14 şekil yan yana önceki oyunda da bu vardı o zaman en  baştakine tıklayacağım iki sap taraftaki gri-1 kare seçili olucak sonra ona tıklayacağım bu iki yeşil-14 şekil birleşip orada oluşucak. soonra bunu bir kez daha yapıcam ve en son yukardaki ne büyük şeklin en solunda iki yeşil kalmış olucak sonra iki yeşil şeklin sodakine tıklayınca bir yer seçilmeli bence ortada olan turuncu-12 şekil seçiliicek sonra ona tıklicam üsteki en büyük yeşil-14 iki şekil birleşip orada bir yeşil-14 şekil oluşturucak sonra ona da tıklayınca en alttaki büyük şeklin içindeki yeşil-14 şeklinin sağ tarafı gri-2 olmalı oraya tıklayınca bu şekil ve turuncu-12 şeklin içinde oluşan şekil birleşip orda oluşmaı şimdi bunu denicem. 
+2- [A6@15,15] 
+3- [A6@26,16] 
+4- [A6@27,17] 
+5- [A6@39,16] 
+6- [A6@39,16] 
+7- [A6@38,16] plan bozuldu ilk dediğim gibi iki yeşil-14 birleşti sonra yie iki defa birleşti ama en üste ik yeşil-14 tek kalınca ne baştakine tıklayınca turuncu-12 şeklin ortası seçilmedi o zaman başka bir yöntem denemem gerek. belki turuncu-12 şeklini çi seçiliyordur ama ben göremiyorumdur o zaman en üsteki büyük şekilde yeşil-14 e basıcam sonra turuncu-12 şeklin ortasına basıcam 
+8- [A6@39,17] 
+9- [A6@33,35] yok olmadı. aciton tuşlarını deneyeiym belki bir işe yarar. 
+10- [A1] 
+11- [A2] 
+12- [A3] bu action tuşu ortadaki büyük turncu-12 şekli sola kaydırdı aha anladım o zmn bu turuncu şekli sağa kaydırıp en üsteki şeklin yanına götürücem sonra iki yeşil-14 şekli seçip bunun içine koyucam sonra action 3  e basa basa en altaki büyük şeklin  yanına geitricem. tami bu ortadaki büyük şekil siyah-5 yolun üzerinde hareket ediyor şimdi sağa taşıyacak tuşu bulup oan tıklicam.
+13- [A4] tmm bu sağa taşıyor aciton3 de sola şimdi sağa doğru götürüyorum. 
+14- [A4] 
+15- [A4] 
+16- [A4] 
+17- [A4] 
+18- [A4] sağda durdu şimdi yukardaki en büyük şekle götürmem için yukarı tuşa basmam gerek çünkü sağda durunca bir defa daha tıkladım ama gitmedi. 
+19- [A5] 
+20- [A5] 5 tuşuna basınca yine aşağıda saçma şekil çıktı bu bir işe yaramıyor daha önce görmüştüm , o şeklin üzeirne tıklayınca yok oluyordu o zaman ona tıklamam gerek. sonra bir daha asla 5 tuşuna basmicam. 
+21- [A6@6,57] oha o gidince oyun ne başa döndü bu  sefer asla action5 e tıklamicam. şimdi baştan yeşil-14 şekilleri birleştirmem gerek. 
+22- [A6@14,16] 
+23- [A6@26,17] 
+24- [A6@26,16] 
+25- [A6@39,17] 
+26- [A4] 
+27- [A4] 
+28- [A4] 
+29- [A4] şimdi birleştirdim ve ortadaki turuncu-12 şekli en sağa taşııdm şimdi yukarı tuşunu bulmam gerek action3 sola action4 sağa, 1 ve 2 yi denicem. 
+30- [A1] tmm yukarı gitti daha önce yukarı gitmemesinin sebebi yukarı doğru siyah-5 yol yoktu o zaman action1 yukarı 2 aşağıya olmalı 3 sla 4 sağa. şimdi turuncu şekli en büyük şeklin yanına götürüyorum. 
+31- [A1] 
+32- [A1] 
+33- [A3] 
+34- [A3] tmm götürdüm bir deffa fazla bastım ve bir şey olmadı şimdi yeşilleri-14 seçip ikisini birleştirip turuncu-12 nin içine koyucam. her zaman gitmesi gerekn yöne en uzak olana tıklıyorum bu şekiilde direkt önündeki ile birleşerek ilerliyor. 
+35- [A6@39,17] 
+36- [A6@50,16] tmm dediğim gibi oldu yeşile basınca turuncu-12 içi gri-2 oldu ve oraya tıklayınca iki yeşil-14 şekil birleşip oranın içine girdi şimdi 1-2-3-4 tuşları ile siyah-5 yolu takip edip şekli taşşıyıp en alttaki büyük şeklin içine getiricem çünkü orda da yeşil-14 bir şekil var ve tam kapıda bekliyor büyük ihtimalle onu en üsteki yeşil-1 ile birleştiricem. aslında en alttakini de getirebilirdim ama bir kere ne üsten başladık devam edelim, hee gerçi en altakini getiremezdim onu turuncu-12 nin içine taşıyabilemm için yanında bir yeşil-14 daha olmalıydı. çünkü iki yeşil-14 birleşip kendilerinden bir sağda veya solda olacak tarafta yenidne oluşuyorlar. devam edeyim. 
+37- [A4] 
+38- [A2] 
+39- [A2] 
+40- [A2] 
+41- [A3] 
+42- [A3] 
+43- [A3] 
+44- [A3] 
+45- [A3] 
+46- [A3] 
+47- [A3] 
+48- [A2] 
+49- [A2] 
+50- [A2] 
+51- [A4] 
+52- [A4] 
+53- [A4] 
+54- [A4] tam dediğim gibi yan yaan geldi şimdi turuncu-12 içindeki şekli seçip sonra oluşacak yere tıkklaıp oraya taşicam. 
+55- [A6@39,53] 
+56- [A6@50,51] 
+taşıdım ev oyun bitti kazandık. 
+
+
+
+===== SEVIYE 3 =====
+1- az önceki oyunda anladım ki amaç yeşilleri-14 birleştirip taşımakmış. ve turuncu-12 kutular taşımaya yarıyor siyah-5 yolun üzeirnde taşıma yapıyorlar. 
+2- [A6@13,14] 
+3- [A6@13,25] 
+4- [A6@14,25] 
+5- [A6@25,26] 
+6- [A6@25,26] 
+7- [A6@25,12] 
+8- [A6@14,50] şimdi iki turuncu-12 şekiil var en üstekini sola doğru biraz getirmem gerek ama nasıl onu seçiicem ki iki tane var o zmn ben ahreke etmeye başlim 1-2-3-4 ile belki o hareket eder,
+9- [A3] ikisi aynı anda hareket ediyormuş neyse boş ver üstekini oynamaya devam edeyim. 
+10- [A6@25,13] 
+11- [A6@36,13] 
+12- [A4] 
+13- [A4] 
+14- [A4] 
+15- [A6@32,13] 
+16- [A6@44,13] üstekini sağa taşıdım ve sağda yeni oyun belirdi yai oyun uzunmuş. şimdi en üste kalan yeşil-14 şekli aşağıya taşımam gerek çünnkü bence en başta gördük ki oyun aşağıda biticek biiz üsten başlattı. ama en üsteki  şeklin onunde yeşil şekil olmalı o zmn sağ taarfta olan yeşil şekillerin sağ tarafta olanına tıklayayım ki sol tarafta şekil oluşsun. 
+17- [A6@55,20] 
+18- [A6@43,20] 
+19- [A6@44,13] 
+20- [A6@43,26] 
+21- [A6@56,31] 
+22- [A6@45,31] 
+23- [A6@44,27] 
+24- [A6@44,39] 
+25- [A6@44,38] 
+26- [A6@44,50] tam dediğim gibi oldu sağ taraftakileri yolun üzerine getirdim ve yukarıdan aşağıya yeşil-14 şekli en aşağıya taşıdım şimdi turuncu-12 taşıma aracını en sağa getirip iki yeşil-14 şekil aracılığı ile içinde bir yeşil şekil oluşturayım. 
+27- [A4] 
+28- [A2] 
+29- [A1] 
+30- [A1] 
+31- [A4] 
+32- [A4] 
+33- [A3] 
+34- [A4] 
+35- [A2] 
+36- [A2] 
+37- [A4] 
+38- [A6@49,49] 
+39- [A6@37,49] getirdim ve içine koydum tabi en üsteki turuncu-12 kutuda hareket etti ama beni alakadar etmez onunla işim bitti. 
+40- [A3] 
+41- [A2] 
+42- [A1] 
+43- [A1] 
+44- [A3] 
+45- [A3] 
+46- [A2] 
+47- [A2] 
+48- [A1] 
+49- [A2] 
+50- [A4] 
+51- [A3] 
+52- [A3] 
+53- [A6@31,50] 
+54- [A6@19,49] 
+55- [A6@19,48] 
+56- [A6@7,49] 
+ve oyun bitti amaç yeşilleri birleştire birleştire hareket etmekmiş.
+
+
+
+===== SEVIYE 4 =====
+1- Aynı oyuna tekrar geldik. Ekranda 1 yeşil-14, 2 yeşil-14, 3 yeşil 14 kareleri var ve büyük bir tane kare var. Bu karenin içinde gri kareler var.  16 tane kare var ve yeşil 14'ten oluşan iki tane şekil var.Turuncu 12 şeklimiz sağ tarafta ve siyah 5 şeklinde bir tane yol var. Arka plan da mavi 10 var.Şimdi 14.şekil olan yeşil şekli sağ tarafta mor 15 şekli var. Mor yeşil 14.şekile tıklayacağım mor 15 ile beraber birleşiyor mu diye kontrol edeceğim.
+2- [A6@14,26] Dediğim gibi yeşil 14, sol taraftaki yeşil 14'e tıklayınca mor 15'in yanındaki sağ tarafta gri 2 renkli yer seçildi şimdi oraya tıklarsam eğer yeşil 14 ile mor 15 birleşip gri 2 yerinde bir renk ortaya çıkması gerekiyor
+3- [A6@26,26] herhangi bir şekil oluşmadı demek ki mor 15 bir duvarmış yeşil 14 onun üzerinden atlayıp sağ tarafa geldi eğer iki tane yeşil 14 yanıysa ve onların sağ soluğuna tıklayınca bunlar birleşip tek yeşil 14 oluşturuyormuş Ama yeşil 14'ün sağ ve solunda mor 15 varsa ve sen yeşil 14'e basınca sağ veya soldaki yer seçiliği grey 2 oluyor oraya tıklanınca yeşil oraya atlıyormuş yeşil 14 oraya atlıyor
+4- [A6@25,25] 
+5- [A5] 
+6- [A6@8,57] Yanlışlıkla A5 yani A5'e bastım ve oyun tekrar başa duydu. Yap dem işlemleri tekrar baştan yapacağım.
+7- [A6@13,24] 
+8- [A6@25,26] 
+9- [A6@23,25] 
+10- [A6@37,25] 
+11- [A6@38,25] 
+12- [A6@38,25] Şimdi yeşil 14'ü diğer yeşil 14'ün yanına taşıdım ve sağ tarafta turuncu 12 var. O turuncu 12'yi siyah 5 yolu kullanarak büyük şeklin yanına getireceğim ki yeşil 14'ü turuncu 12'nin içine götürebileyim.
+13- [A3] 
+14- [A6@38,26] 
+15- [A6@49,25] 3 tuşuna basınca turuncu 12 kutusu büyük şekle yanaştı ve arkadaki yeşil 14'e tıkladım ve turuncu 12'nin içinde gray 2 seçili yer oldu. Oraya tıkladığım anda 2 yeşil 14 şekil birleşip turuncu 12'nin içinde 1 tane yeşil 14 şekil oluşturdu. Şimdi turuncu 12 şeklini siyah 5 yoluna kullanarak sağdaki büyük şekle taşıyacağım. Çünkü sağdaki büyük şeklinin ağzında yeşil 14 şekli var.
+16- [A4] 
+17- [A4] 
+18- [A4] 
+19- [A4] Dört tuşuna tıklayarak turuncu 12 şeklini ve içinde yeşil 14 şekli var. Sağ tarafa doğru getirdim ve diğer büyük şeklin yanına getirdim. Şimdi ikisini tıklayarak birleştirip en sağda bir yeşil şekli yeşil 14 şekli oluşturacağım.
+20- [A6@21,25] 
+21- [A6@32,25] Şimdi yeşil 14 şekli oluştu ve önümdeki büyük şekilde iki tane yeşil 14 var. Bu iki yeşil 14'ü birleştirmem gerek. Ama aralarında gri bir den oluşan iki boş karakutu var. Yeşil 14'leri tek tek oynatamıyorum. Ama önlerinde mor 15 kutuları var. Ve yeşil 14'ler mor 15'lerin üzerinden atlayabiliyor. ve bir ileri, yani iki ileri kutuya gidebiliyor. Ve bu mantık kullanarak Yeşil 14'leri en sona doğru taşıyacağım, yan yana gelene kadar.
+22- [A6@31,25] 
+23- [A6@31,37] 
+24- [A6@31,39] 
+25- [A6@31,50] 
+26- [A6@50,26] 
+27- [A6@50,38] 
+28- [A6@50,37] 
+29- [A6@49,50] 
+30- [A6@49,49] 
+31- [A6@38,49] Tüm Yeşil 14'leri yan yana getirdim. Şimdi arkadaki Yeşil 14'e tıklayıp Turuncu 12'nin içini alacağım. Çünkü Turuncu 12 bir tane taşıt. Onu kullanarak, siyah 5 yolunu kullanarak diğer büyük şekle taşıyacağım. Çünkü oyun orada bitiyor.
+32- [A6@37,49] 
+33- [A6@25,50] Turuncu 12'nin içine koydum. Şimdi siyah 5 yolunu kullanarak ve 1, 2, 3, 4 aksiyon tuşlarını kullanarak Turuncu 12 kutusunu siyah 5 kutusu yolundan götüreceğim.
+34- [A1] 
+35- [A3] 
+36- [A3] 
+37- [A3] 
+38- [A3] 
+39- [A2] 
+40- [A2] 
+41- [A2] Şimdi taşıdım alttaki kutuya getirdim ve burada ilginç bir şey var ortada siyah 5 gibi uzun bir yol var şeklin tam ortasında bu ilk defa gördüm bir şey ve turuncu 12 bir taşıyıcı var yolun ortasında turuncu bizim yeşil 14 şekli siyah yol 5 yolunun üzerinden hareket edemiyordu. Bu turuncu 12 şeklini yeşil 14 şeklinin önüne getirmem gerekiyor ki mora 15 şeklini kullanarak yeşil 14 ve mora 15'in üzerinden atlatıp taşıyıcı turuncu 12'nin içine koyacağız.
+42- [A4] 
+43- [A4] 
+44- [A4] 
+45- [A6@41,19] 
+46- [A6@40,31] Tam planladığım gibi turuncu 12 şeklini getirdim mora 15'in önüne ve yeşil 14'ü mora 15'i kullanarak turuncu 12'nin içine taşıdım. Şimdi sol tarafta 4 tane mora 15 şekli var ortada siyah 5 bir yol var siyah 5 yolun içinde mavi 9 pikselleri var ama önemsiz çünkü altında siyah 5 yolu var. bizim taşıyıcı siyah 5 üzerinden hareket ediyor ve mor 15 kutularını kullanarak yeşil 14'ün yanına taşıyacağım birleştirip tek yapacağım tekrar o mor 15'i kullanarak mor 15'i kullanarak turuncu 12'nin içine koyacağım bu şekilde taşıyıp sağa sola taşıyıp yeşil 14'lerin hepsini birleştirmeye çalışacağım.
+47- [A1] 
+48- [A3] 
+49- [A3] 
+50- [A3] 
+51- [A3] 
+52- [A6@16,31] 
+53- [A6@16,20] 
+54- [A6@17,20] 
+55- [A6@28,19] 
+56- [A6@29,20] 
+57- [A4] 
+58- [A4] 
+59- [A6@29,19] 
+60- [A6@28,30] 
+61- [A6@28,32] 
+62- [A6@29,43] 
+63- [A6@29,44] 
+64- [A6@16,43] 
+Tüm yeşil şekilleri birleştirdim ve oyun bitti. Demek ki bu oyunda amacımız tüm yeşil şekilleri birleştirmekmiş.
+
+
+
+===== SEVIYE 5 =====
+1- 

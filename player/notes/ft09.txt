@@ -1,0 +1,120 @@
+===== SEVIYE 1 =====
+1- Şimdi ekranda siyah 5 diye bir tane arka plan var ve bu çoğunluk olduğu için bunu arka plan diyorum. Oyunun dışında turuncu 8 ve mavi dokuzlardan ulaşan bir sürü kare var. Bu karelerin oluşturduğu dikdörtlerinin tam ortasında gri 2, beyaz 0, turuncu 8'i beraber oluşturduğu kare var. Bu karelerden 4 adet var oyunda. Oyunun en altından turuncu 12 diye düz bir tane çizgi var. Bu düz satır oyunun aksiyon adet sayısı oluyor. Mesela bir aksiyon yaptığında bir tane 12 ile 11 oluyor. Tüm 12'ler 11'e dönüştükten sonra en başa dönüyor. Hepsi 10'a dönüşüyor. En başa dönüyor. Hepsi de 19'a dönüşüyor. Bunlar oyunun aksiyon sayısı. Şimdi 1, 2, 3, 4, 5, 6, 7 ve tıklama tuşlarına rastgele basacağım. Bakalım ne işe yarıyor.
+2- [A1] 
+3- [A2] 
+4- [A3] 
+5- [A4] 
+6- [A5] 
+7- [A7] 
+8- [A6@13,13] 
+9- [A6@16,46] 
+10- [A6@50,46] 
+11- [A6@33,33] 
+12- [A6@48,11] 
+13- [A6@56,13] 
+14- [A6@56,22] 
+15- [A6@42,22] 
+16- [A6@46,54] Tüm tuşlara bastım, hareket etmedi, ama en sonda bir tane mavi 9 karesine tıkladım da turuncu 8'e dönüştü ve galiba diğer 4 ekranda diğer 4 tane kareye, bu seçili kareyi ekranda diğer 4 tane karelerden herhangi birine benzetmeye çalışacağız. O nedenle en üst seçili yerde en üstteki 9 turuncu, 9 mavi, 9 mavi, 9 mavi kararları tek tek tıklayacağım. Turuncu 8 olsun.
+17- [A6@47,39] 
+18- [A6@41,48] 
+19- [A6@55,46] 
+20- [A6@55,55] 
+21- [A6@37,55] 
+22- [A6@40,40] 
+23- [A6@54,40] 
+24- [A6@47,47] 
+25- [A6@25,40] 
+26- [A2] 
+27- [A3] 
+28- [A4] 
+29- [A2] 
+30- [A5] 
+31- [A7] 
+32- [A6@39,39] Tüm mavi dokuzlara tıkladım. Hepsi turuncu sekiz oldu ama herhangi bir şeye benzemedi. Tekrar bir mavi dokuzla tıklayacağım. Bakalım sefer oluyor mu?
+33- [A6@41,37] 
+34- [A6@41,37] Şimdi oyunu anladım ekranda beyaz sıfır ekranda dört büyük şekil var dört büyük şekil bu dört büyük şeklin içinde turuncu sekiz mavi dokuz mavi dokuz şeklinde etrafını çevirilen kareler var ve bu etraftaki karelerin tam ortasında da bir kare var. Bu karenin içinde gri 2, beyaz 0, turuncu sekillerden oluşan kareleri bu büyük kareyi oluşturuyor. Ve beyaz sıfırın, bu karenin içinde beyaz sıfırın aktif olduğu taraftaki kutular, turuncu sekilleri, bu üç büyük örnek hepsinde böyle en aşağıdaki örneği biz değiştirebiliyoruz. Çünkü etrafında gri 4 ve gri 2'den oluşan bir seçici var. biz fare ile tıklayarak, click altı tuşuyla tıklayarak bu turuncu 8 ve mavi dokuzları değiştirebiliyoruz ve beyaz sıfır olduğu tarafları turuncu 8, gri iki olan tarafları mavi dokuz yapacağız
+35- [A6@39,39] 
+36- [A6@47,39] 
+37- [A6@45,53] 
+38- [A6@57,54] 
+39- [A6@56,41] 
+Dediğim gibi yaptım ve oyun bitti.
+
+
+
+===== SEVIYE 2 =====
+1- Şimdi etrafta gri dörtler var büyük bir tane şekil sağ en üste mavi 9 ve turuncu 12 şeklinde 2 kare var ve bu büyük şeklin tam ortasındaki şekilde en aşağıda tabi her gün olduğu gibi bir tane çizgi var bu çizgi turuncu 12 renginde ve her bir klik olayından sonra bu 11 denişi hepsi 11 olduktan sonra 19-8 bu şekilde bu kalit tıklama sensini belirtiyor bu bazen en aşağıda oluyor, bazen en sağda oluyor, bazen en üstte oluyor. Şu an en altta. Etrafta karalar var. Büyük bir tane dört dörtgen var bu dört dörtgenin içinde karalar var. 3-3 6-9 12-15 tane kara var. Bunun 13'ü mavi 9 şeklindeki karalardan oluşuyor. Ve ortada iki tane kare var. Bu iki tane kare üç renkten oluşuyor. Beyaz sıfır, gri iki ve turuncu on iki. Az önceki oyunda olduğu gibi galiba beyaz sıfırların olduğu taraf turuncu on iki olacak. O nedenle mavi dokuzlara tıklayacağım. 9 turuncu on ikiye dönüşsün. Ve gri ikiye olduğu taraflar ise mavi dokuz olarak kalacak.
+2- [A6@23,16] 
+3- [A6@22,24] 
+4- [A6@23,26] 
+5- [A6@22,19] 
+6- [A6@30,17] 
+7- [A6@39,17] 
+8- [A6@32,32] 
+9- [A6@19,40] 
+10- [A6@23,42] 
+11- [A6@28,48] 
+12- [A6@39,41] 
+13- [A6@39,48] 
+14- [A6@32,49] 
+15- [A1] 
+16- [A2] 
+17- [A1] 
+18- [A2] Şimdi, gri ikilerin olduğu tarafı turuncu 12, bu en ortada olan gri beyaz ve turuncu 12-2 sıfırdan oluşan kare, büyük etrafındaki büyük kareyi temsil ediyor. Yani bunu büyütüp etraktafik kareye oturduğunda beyaz sıfırlar mavi dokuzun üzerine, gri ikiler turuncu 12 üzerine, gri ikiler turuncu 12 üzerine, beyaz sıfırlar mavi dokuzun üzerine denk geliyor. Ama bu böyle olmaması gerekiyormuş. Beyaz sıfırlar mavi 9 yerine turuncu 12 yerine gelmesi gerekiyor. O nedenle mavi ile turuncu, mavi 9 ile turuncu 12 renklerini değiştireceğim.
+19- [A6@21,32] 
+20- [A6@21,39] 
+21- [A6@22,47] 
+22- [A6@30,48] 
+23- [A6@37,48] 
+24- [A6@39,41] 
+25- [A6@39,34] 
+26- [A6@30,32] 
+27- [A6@24,25] 
+28- [A6@24,17] 
+29- [A6@30,16] 
+30- [A6@39,16] 
+31- [A6@38,23] 
+Dediğim gibi tüm renkleri değiştirince oyun bitti. Grey 2'nin olduğu taraf. Mavi 9, beyaz 0'nun olduğu taraf, truncu 12 veya tam tersi olacakmış. Ortada olan yani önümüzde bir tane büyük şekil var ve kareler var. Orta da olan kare etraftaki karelerin rengini temsil ediyor.
+
+
+
+===== SEVIYE 3 =====
+1- Şimdi önümde gri dörtlerden oluşan bir tane arka plan var ve bir sürü kara var ve tüm kareler 8 turuncu 8'den oluşuyor tabi ki de ve bu turuncu 8 kareleri bir tane kareyi çevreliyor o çevredikleri kareyi büyütüp üzerine koyunca tam üzerine denk geliyor gri iki tarafı var ve beyaz sıfır tarafı var bu ortadaki karenin Bazı karelerin tam ortası turuncu 12 olurken bazı iki tane karenin tam ortası turuncu 8. Şimdi bu şu anlama geliyor. Turuncu 8'in olduğu karelerde sıfır beyaz taraftaki kareler ya turuncu 8 olacak ya da kahverengi 12 olacak. Bunu deneyerek bulacağız.
+2- [A6@22,22] 
+3- [A6@38,15] 
+4- [A6@38,22] 
+5- [A6@15,38] 
+6- [A6@22,38] 
+7- [A6@30,32] 
+8- [A6@38,39] 
+9- [A6@39,46] 
+10- [A6@46,24] Tam dediğim gibi yaptım ve ortadaki gri 2, beyaz 0, turuncu 8'den oluşan kareyi büyütüp etraftaki karelerin üzerine oturttuğunda tam gri 2'ler turuncu 8'lerin üzerine gelecek şekilde ağırladım ama oyun böyle değilmiş. Grigilerin olduğu ortasında Turuncu 8 olan karelerde Grigilerin olduğu taraf Turuncu 12 olması gerekiyormuş. Turuncu 8 olmaması gerekiyormuş. Şimdi tüm renkleri değiştireceğim.
+11- [A6@24,4] 
+12- [A6@31,6] 
+13- [A6@36,6] 
+14- [A6@25,15] 
+15- [A6@38,15] 
+16- [A6@15,23] 
+17- [A6@22,22] 
+18- [A6@30,22] 
+19- [A6@39,22] 
+20- [A6@49,24] 
+21- [A6@14,30] 
+22- [A6@29,32] 
+23- [A6@47,30] 
+24- [A6@15,40] 
+25- [A6@25,41] 
+26- [A6@29,38] 
+27- [A6@40,39] 
+28- [A6@47,39] 
+29- [A6@23,47] 
+30- [A6@40,47] 
+31- [A6@24,55] 
+32- [A6@31,54] 
+33- [A6@38,54] 
+Evet dediğim gibi tüm renkleri değiştirince oyun bitiyor. Oyunun mantığı şuymuş. Ortada gri veya gri 2, beyaz 0 ve turuncu 12 veya mavi 9 veya kahverengi turuncu 8'den oluşan küçük bir kara var. Bu küçük karanın etrafında 1, 2, 3, 4, 5, 6, 7, 8 tane kara var. Bunun hepsi de büyük bir kara oluyor. Bu büyük karenin etrafında da 1,2,3,4,5,6,7,8 tane kare var ve bu hepsi de büyük bir tane kare alıyor. Ve hangi taraftaki kare ne renkteyse en büyükteki kare de o renkte olacak şekilde ayarlıyormuşuz. Bu şekildeymiş oyun
+
+
+
+===== SEVIYE 4 =====
+1- 

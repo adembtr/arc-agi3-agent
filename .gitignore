@@ -1,0 +1,25 @@
+# === Buyuk klasorler — GitHub'a GITMESIN ===
+ARC-AGI-3-Agents/
+arc_agi_3_wheels/
+environment_files/
+
+# === Python ===
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# === Model / agirlik / onbellek (buyuk) ===
+*.pt
+*.pth
+*.onnx
+*.bin
+*.safetensors
+.cache/
+
+# === Sistem / log ===
+.DS_Store
+*.log
+*.tmp

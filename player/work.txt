@@ -1,0 +1,59 @@
+ARC-AGI-3 PLAYER + NOTLAR - CALISTIRMA
+======================================
+
+1) Sunucuyu baslat:
+
+   cd /home/adem/Desktop/AGI/ARC-AGI-3-Agents && uv run python ../player/server.py
+
+2) Tarayicida ac:
+
+   http://localhost:8000
+
+3) Farkli port istersen:
+
+   cd /home/adem/Desktop/AGI/ARC-AGI-3-Agents && PLAYER_PORT=9000 uv run python ../player/server.py
+   -> http://localhost:9000
+
+DURDURMAK ICIN: terminalde Ctrl+C
+KOD DEGISTIYSE: Ctrl+C ile durdur, tekrar baslat, tarayicida F5.
+
+
+ARAYUZ
+------
+- Ust bar: oyun secme menusu + STATE + Seviye + animasyon kare sayisi + gecerli aksiyonlar.
+- SOL = oyun:
+    Butonlar:  0  1  2  3  4  5  7   (+ grid'e sol tik = 6)
+      0            = RESET (SABIT, biliyorsun)
+      grid'e tik   = ACTION6, tikladigin (x,y) (SABIT)
+      1 2 3 4 5 7  = ANLAMSIZ. Ne yaptigini bilmiyorsun -> tikla, gozle, KESFET.
+      (mavi cerceve = o an gecerli aksiyon, anlamini soylemez)
+- SAG = not defteri. Otomatik kaydolur -> notes/<oyun>.txt
+
+
+NOT DEFTERI KURALLARI
+---------------------
+- Enter = yeni numarali satir (2- , 3- ...).
+- Bir aksiyona bastiginda nota OTOMATIK makine-okur token duser:
+      [A0]            RESET
+      [A1]..[A5] [A7] basit tuslar
+      [A6@20,30]      tiklama, x=20 y=30
+- Token dustukten sonra Enter'a bas, o aksiyonun ne yaptigini yaz.
+
+  Ornek satir:
+    3- iki benek vardi, ortasina tikladim [A6@31,20] -> BIRLESTILER
+
+
+NEDEN BU FORMAT
+---------------
+Sonra bu txt'lerden SADECE aksiyonlari regex ile cekecegiz:
+    \[A\d[^\]]*\]
+Boylece "model bizim gibi mi oynuyor" diye insan-oyununu (senin izlerin)
+ajan-oyunuyla karsilastiracagiz.
+
+
+OYNARKEN NEYE DIKKAT (dunya modeli icin)
+----------------------------------------
+- Hangi tus neyi hareket ettiriyor?  (1 neyi oynatti? 2 neyi?)
+- Tiklama (6) neye yariyor?
+- Seviye sayacini ne artiriyor?  -> HEDEF
+- Neye degince GAME_OVER?         -> TEHLIKE
