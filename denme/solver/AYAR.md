@@ -35,3 +35,15 @@
   şartnameden. `SMALL=200` env.candidates ile tutarlılık için.
 - `max_rules=6` (kural listesi üst sınırı): keyfî; büyütmek aşırı-uyum,
   küçültmek kapsam kaybı. vc33 dışında da bu değerle ölçülmeli.
+
+## 5. hedef_gorev.md görevi ayarları (goal/)
+- `FIT doluluk eşiği = 0.85` (goals.py): g50t'nin gerçek iç-içe-geçmesi 43/49=0.88
+  doluyor (parçalar birleşince 7x7'nin 6 hücresi boş kalıyor). 0.9 → kaçırıyordu.
+  Risk ORTA: başka oyunda 0.85-0.9 arası sahte tamamlayıcı çıkabilir; puan sıralaması
+  yine de koruyor (FIT puanı = doluluk).
+- `UNIFY/COLLECT/OVERLAP boyut-mesafe normalizasyon sabitleri` (16.0, 64.0, /4, /8):
+  puan şekillendirme; sıralamayı etkiler, tespiti etkilemez. Risk DÜŞÜK.
+- `meta.py sabitleri`: MONO_RATIO=0.8 (sayaç sarmalı payı), RATE_MIN=0.15,
+  REV_FRAC=0.4 + REV_MIN=8 (geri-sarma olayı), HAZARD_ACT_RATIO=0.5
+  (g50t ölçümü: A5=0.70 vs en yakın gerçek aksiyon 0.23 — geniş marj).
+  Risk ORTA: geri-sarma sabitleri g50t'de ölçüldü; diğer oyunlarda doğrulanmalı.

@@ -532,3 +532,32 @@ denme/
   (gizli-durumlu oyunda davranış imzası yanıltıcı). Tek kip evrensel değil →
   sıradaki iş: determinizme göre kip seçen UYARLANIR bisimülasyon.
 - z3 offline wheel hazır (`solver_wheels/`), Kaggle bütçe/timeout korumaları çalışıyor.
+
+---
+
+## 19. Hedef hipotezi + meta + şema görevi (2026-07-25) — hedef_gorev.md
+
+> Tam ölçümler: `denme/goal/SONUC2.md`. Motivasyon: FAZ 2 "seviye-1-öncesi
+> sömürülecek şey yok" dedi — çünkü ajan hedefi ARAYARAK buluyordu. İnsan ise
+> hedefi İLK KAREDE, aksiyonsuz, geometriyle kuruyor. Bu görev onu mekanikleştirdi.
+
+- **Modül A (goals.py) — hedef hipotezi: ✅ 4/4 (aksiyonsuz).** 5 oyun-nötr geometrik
+  şablon (UNIFY/FIT/OVERLAP/CONSISTENT/COLLECT). İlk karede insan hedefiyle eşleşen
+  hipotez ilk 2 sırada: m0r0→UNIFY, g50t→FIT, ar25→OVERLAP, lf52→COLLECT.
+  **Notun tezi kanıtlandı: dünya bilgisi olmadan saf sayıyla hedef kuruldu.**
+- **Modül B (meta.py) — sayaç/tehlike/bağlaşık: ✅ 4/4.** ft09/m0r0 sayaç,
+  g50t A5-tehlike, ar25 coupled. Hepsi sayım/geometri, oyun adı geçmiyor.
+- **Modül C (schema.py) — şema/φ: çekirdek ✅, transfer ⚠️.** ft09'da CONSISTENT
+  tespiti φ={0→8,2→9} çıkardı = insan eşlemesiyle BİREBİR (aksiyonsuz). Ama ft09
+  sv1 geçilemediği için sv2-transfer ölçülemedi.
+- **Entegrasyon (goal_agent.py): ❌ 0/5 yeni oyunda sv1.** Sert gerileme yok
+  (tn36/r11l/cd82 sv1 korundu). **KESİN DERS: darboğaz artık "hedefi bilmemek"
+  DEĞİL — saf PLANLAMA.** Model-free progress-tepe-tırmanışı makro duvarını kıramıyor
+  (ar25: OVERLAP progress 0.10'da plato). Girdiler (kural FAZ 1 + hedef) hazır;
+  eksik olan çok-adımlı arama (BFS/A*/SAT-plan).
+
+### GENEL DURUM (iki görev sonrası)
+Perception + şekil + olay + rol + **hedef** + **meta** + kural-öğrenme katmanları
+ÇALIŞIYOR. Seviye geçen tek yöntem hâlâ **I_wrong_elim_reward** (4/25, yanlış-eleme).
+Tüm gelişmiş katmanların tosladığı TEK duvar net: **planlayıcı** (öğrenilen kural +
+hedef üstünde koordineli çok-adımlı arama). Sıradaki iş kesinlikle bu.
