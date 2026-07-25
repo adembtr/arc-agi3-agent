@@ -4,6 +4,11 @@
 > Felsefe: Modelin "zekası" = veriden ezber (ağırlık) ya da kör hamle arama (BFS) DEĞİL;
 > **oyunun mantığını kanıttan deşifre edip kurmak.** Bunu bir kere iyi kurarsak,
 > hiç görülmemiş oyunları da çözer.
+>
+> **DURUM (2026-07-25):** İlk seviye-geçen yöntem bulundu. **Yanlış-eleme + ödül**
+> (kullanıcının fikri) 4/25 oyunda seviye geçti (vc33 sv2; cd82, tn36, r11l sv1).
+> VSA/TPR beyni (tek-atış kural) kuruldu ve doğrulandı, 2/4 kıyas oyununu geçti.
+> Detay: **§14–§17.** Sıradaki darboğaz: uzun-dizi (makro) oyunları.
 
 ---
 
@@ -267,14 +272,15 @@ Döngü (lf52 örneği):
 
 ---
 
-## 12. Şu anki durum (2026-07-19)
+## 12. İnsan oyun keşfi (2026-07-19) — DSL için spec
 
 - Player + not aracı kurulu ve çalışıyor; 4 oyun seçili (tip gizli).
 - **lf52** insan tarafından çözüldü: Seviye 1-2-3 (WIN). Çıkarılan mekanik:
   seç → aynı yeşilleri birleştir → turuncu-12 taşıyıcıya yükle → siyah-5 ray'de sür → teslim.
   ACTION5 = tuzak (başa sarar). Yön: 1=yukarı 2=aşağı 3=sol 4=sağ (yalnız yol varsa).
   Öğrenme eğrisi görünür: L1=85, L2=56, L3=56 aksiyon (kafa karışıklığı → uygulamaya döndü).
-- Sıradaki: lf52'yi ~10. seviyeye taşı + farklı tipten oyunları oyna → sonra perception.py.
+- Bu insan izi, DSL ilkellerinin ("birleştir", "taşı", "ray-takip") **spec'i** — hangi
+  mekaniklerin oyunlar arası tekrar ettiğini gösterir.
 
 ---
 
@@ -348,3 +354,181 @@ Katmanlar sirayla kuruluyor: **sekil → olay → rol → iliski → dinamik →
   ARC-AGI-3-Agents/, arc_agi_3_wheels/, environment_files/  (GitHub'a GITMESIN).
 - GIDEN: agent/, player/, plan.md + gelecek klasorler.
 - Her gun sonu commit. (Kurulum surerken classifier kesildi; tamamlanacak.)
+
+---
+
+## 14. denme/ — Karar/keşif yöntemi yarışması (2026-07-19/20)
+
+> Temsil katmanı (§13) sağlamdı ama **hiçbir plan katmanı seviye geçemiyordu.** Bu yüzden
+> orijinal `agent/`'a DOKUNMADAN, `denme/` altında kopya altyapıyla **20+ karar yöntemi**
+> yarıştırıldı. Amaç: saf matematik/olasılık (LLM YOK, ezber YOK) ile ilk seviyeyi geçmek.
+
+### 14.1. Altyapı
+- `denme/infra/` = perception.py, action.py, transition.py kopyaları (orijinal bozulmasın).
+- `env.py`: hızlı headless ortam (HTTP/UI yok, ~150–220 adım/sn). `candidates()` tüm
+  tuşları + nesne-başı tık (size≤200) sunar.
+- `bench.py`: metrikler {max_level, coverage, events, merges, min_obj, goal_drop}.
+- `strategies.py`: 13 klasik yöntem. `strategies2.py`: makro/eleme yöntemleri.
+
+### 14.2. Round 1 — 13 klasik yöntem (1500 adım × 2 tohum × 3 oyun)
+
+| # | Yöntem | Skor | Kapsam | Olay | Seviye |
+|---|--------|------|--------|------|--------|
+| 1 | **Go-Explore** | 42.9 | 304 | 78 | 0 |
+| 2 | Novelty-Search | 40.3 | 183 | 72 | 0 |
+| 3 | Thompson | 39.6 | 187 | 70 | 0 |
+| 4 | Belief-InfoGain | 39.2 | 192 | 68 | 0 |
+| 5 | Random | 37.9 | 182 | 66 | 0 |
+| … | (efe/curiosity/empowerment/model_plan) | 13.7 | 130 | 18 | 0 |
+
+**Go-Explore keşifte açık ara galip** (m0r0'da 477 vs ~100 = 4.5 kat). Reset-only
+ortamımıza doğal uyum (arşivle + umut veren duruma dön + oradan keşfet).
+
+### 14.3. KRİTİK BULGU — darboğaz keşif değil, MAKRO
+- **13 yöntemin HİÇBİRİ hiçbir oyunda seviye geçemedi**, hiç birleşme üretemedi (5000 adımda bile).
+- **TÜM yöntemler m0r0'da min_obj=2'ye iniyor** — yani "2 nesne kaldı" eşiğine herkes
+  ulaşıyor ama **son koordineli birleştirmeyi** yapamıyor.
+- Açgözlü sömürü yöntemleri (efe/curiosity) EN KÖTÜ (kapsam 130) — ödül yokken çöküp tekrara giriyor.
+- **Ders:** Sorun "hangi keşif bonusu" değil. Eksik olan **tek-aksiyon değil aksiyon-DİZİSİ
+  (makro)** keşfi. Tek-adım keşif "seç→hedef→uygula" çiftini zincirleyemiyor.
+
+---
+
+## 15. KIRILMA — Yanlış-Eleme + Ödül (kullanıcının fikri) ✅ İLK SEVİYE GEÇEN
+
+### 15.1. Fikir (kullanıcının)
+> Doğru cevap TEK ve gizli → bulmak zor. Ama YANLIŞ bol ve hedefi bilmeden görülür
+> (etki-yok / geri-dönüş / game-over). **"Tüm yanlışları ele, geriye doğru kalır."**
+
+### 15.2. Mekanizma (`strategies2.py`: `I_wrong_elim_reward`)
+- **W[bağlam-token, aksiyon]** = 1.0'dan başlar, SADECE yanlışta düşer (×0.15 = BETA). Bayes eleme.
+- Bağlam ZENGİN: `(6, şekil-token)` = tık ayrı, `(n, -1)` = tuş ayrı → tık/tuş ayrı elenir.
+- **YANLIŞ (ele):** etki-yok / görülen duruma geri-dönüş / game-over.
+  **YANLIŞ DEĞİL:** herhangi yapısal değişim → çok-adımlı doğru hamleyi KORUR (elemez).
+- Yeni şekil → yeni token → W=1 (TAZE, elenmez). Seviye atlayınca eski elemelere 2. şans (×4 revive).
+- Ödül: yeni durum (+0.3), seviye-atlama (+10, kredi ataması geriye). Go-Explore omurga.
+- Bağlam TOKEN → genelleşir. Her oyunda sıfırdan. **EZBER YOK, önceden-eğitim YOK.**
+
+### 15.3. SONUÇ — 25 oyun taraması (1800–3000 adım, 2 tohum)
+
+**SEVİYE GEÇEN (4/25):**
+
+| Oyun | Tip | Ulaşılan seviye | Güven |
+|------|-----|-----------------|-------|
+| **vc33** | click | **seviye 2** | 5/5 tohum güvenilir |
+| **cd82** | kb-click | seviye 1 | geçti |
+| **tn36** | click | seviye 1 | geçti (kapsam 1498) |
+| **r11l** | click | seviye 1 | geçti (kapsam 1311) |
+
+**Geçemeyen (21/25):** lf52, m0r0, g50t, ft09, lp85, s5i5, su15, ar25, bp35, cn04,
+dc22, ka59, sc25, sk48, sp80, tu93, sb26, re86, tr87, ls20, wa30.
+
+### 15.4. Analiz
+- **Geçen 4:** kısa tık-dizisiyle ilerleyen tipler (tıkla→desen eşle / renk değiştir).
+  Yanlış-eleme doğru tıklamayı hızla buluyor.
+- **Geçemeyen 21:** uzun koordineli dizi gerektiren tipler (kargoyu ray'de sür, çok-adımlı
+  taşıma). Makro/dizi problemi burada da duruyor (§14.3 ile aynı duvar).
+- **Değerlendirme:** Bu, tüm oturumun **ilk seviye-geçen** yöntemi. 4/25 = %16 (biri sv2),
+  saf sıfırdan-sembolik, ezbersiz. Kullanıcının "yanlıştan öğren" sezgisi çalıştı.
+- Canlı izleme: `live.py` → http://localhost:8005 (SPACE adım; W ağırlıkları, elenen
+  aksiyonlar, ödül kredisi canlı).
+
+---
+
+## 16. VSA / TPR beyni — "her şey vektör" (kullanıcının son vizyonu)
+
+> Kullanıcı: *"Gerçek hayattan bilgi verme, kod otomatize etme (aşağı-hareket gibi) YOK;
+> her şeyi vektörlerle yap, en son bir vektöre sok, çıkış 1–7 aksiyon, döngüye gir,
+> AMA aşırı hızlı öğrensin."* → **Vektör Sembolik Mimari (hiperboyutlu hesaplama).**
+
+### 16.1. Çekirdek (`denme/vsa.py`) — DOĞRULANDI
+- MAP modeli, bipolar {−1,+1}, **D=10000**. Metin/gradyan/LLM YOK.
+  - `bind(a,b)=a*b` (rol↔değer eşle, kendi-tersi) · `bundle=sign(Σ)` (küme/yapı)
+  - `unbind=a*r` (bind kendi-tersi) · `permute=roll` (sıra) · `sim=<a,b>/D`
+  - `ItemMemory`: isimli atom + `cleanup` (gürültülü vektörü en yakın atoma çevir).
+- Doğrulama: atomlar ~dik (0.004), bind→unbind geri getirir (1.0), bundle üyeliği çalışır.
+
+### 16.2. Hiyerarşik bilgi (`denme/knowledge.py`) — kullanıcının vizyonu
+`piksel → ŞEKİL → NESNE → SAHNE → KURAL → en büyük bilgi`. Her seviye alt seviyelerin bind+bundle'ı:
+- **NESNE** = bind(şekil)+bind(renk)+bind(konum) → tek vektör (model "yeşil" bilmez;
+  "bu rolde bu şekil" bilir).
+- **SAHNE** = tüm nesnelerin permute'lu bundle'ı → tek vektör.
+- **KURAL** = `(aksiyon, ÖNCE) → SONRA` bind. **TEK-ATIŞTA** öğrenilir, cebirle KULLANILIR:
+  `predict_after(a, önce) = unbind(kural, (aksiyon,önce)) ≈ SONRA`.
+- Doğrulama: tek-atış kural sim=1.0; **renk-bağımsız yapısal genelleme** çalıştı
+  (iki-yeşil kuralı → iki-mavi'ye ~0.49 transfer).
+
+### 16.3. VSA ajanı (`denme/vsa_agent.py`)
+- Her adım: grid→sahne vektörü; aksiyon→yeni sahne; kural tek-atışta öğren; karar:
+  `w × (novelty + 0.3×plan_val)` (plan_val = tahmini sonra ne kadar değişecek). Yanlış-eleme W korunur.
+- **Sonuç:** tn36 + r11l geçti (2/4 kıyas). vc33/cd82 **eleme dengesi bozununca düştü** → AYAR GEREK.
+- Geniş tarama (12 oyun, 2 tohum): **2/12** seviye geçti (tn36, r11l).
+
+### 16.4. Son kıyas (4 oyun, 1200 adım, tek tohum)
+| Oyun | Yanlış-eleme (I) | VSA-beyin |
+|------|:---:|:---:|
+| vc33 | ✅ sv1 | — |
+| cd82 | — | — |
+| tn36 | ✅ sv1 | ✅ sv1 |
+| r11l | ✅ sv1 | ✅ sv1 |
+| **GEÇEN** | **3/4** | **2/4** |
+
+> Not: kısa/tek-tohum koşu; uzun bütçe + çok tohumla yanlış-eleme vc33 sv2 + cd82'yi de geçiyordu.
+> Bu tablo "hızlı" hali. Yanlış-eleme şu an önde; VSA'nın eleme dengesi ayarlanınca eşitlenmeli.
+
+---
+
+## 17. YARIN / SIRADAKI (öncelik sırasıyla)
+
+1. **VSA eleme dengesi:** vc33 + cd82'yi geri kazan (I_wrong_elim seviyesine getir) +
+   VSA tahminini (`predict_after`) karara DAHA güçlü kat (0.3 → dinamik). Şu an tahmin
+   sadece zayıf rehber; model-tabanlı planı öne çıkar.
+2. **MAKRO / besteleme (asıl duvar):** geçemeyen 21 oyunun ortak sorunu uzun koordineli dizi.
+   - Go-Explore + **2–3 aksiyonluk dizi** dene (tek aksiyon değil) → "seç→hedef" çifti.
+   - VSA'da **kuralı zincirle:** `predict_after`'ı ardışık uygulayıp çok-adımlı sonucu öngör.
+   - Yanlış-elemeyi **DİZİ üzerinde** yap (tek aksiyon değil, makro ele/canlı tut).
+3. **Büyük doğrulama testi:** 25 oyun × çok tohum × uzun bütçe. `nohup` erken kesiliyor →
+   **senkron küçük gruplar** halinde koştur (kanıtlanmış çözüm).
+4. **Go-Explore hücre tanımını kabalaştır:** tam grid-fp yerine (nesne-sayısı + kümeler) →
+   anlamlı durumlar arşivlensin, gürültü değil.
+5. **ft09 (desen-eşleştirme) özel:** yön yok, sadece tık; hedef "şablon eşle" → goal-hipotez
+   diline **şablon-eşleştirme** eklenmeli (min_count/min_obj yetmiyor).
+6. **Derin açık soru:** "hangi değişmezlik tanımlayıcı, hangisi tesadüfi" — kavram-başına
+   ÖĞRENME (Tog örneği). Şu an değişmezlikler sabit kodlu; ideal: oyundan öğrensin.
+
+### Dosya haritası (denme/)
+```
+denme/
+├── infra/               kopya perception/action/transition (orijinal bozulmasın)
+├── env.py               hızlı headless ortam
+├── bench.py             metrikler
+├── strategies.py        13 klasik yöntem (Go-Explore galip)
+├── strategies2.py       makro/eleme — I_wrong_elim_reward = KAZANAN
+├── vsa.py               VSA çekirdek (D=10000, bind/bundle/unbind) — doğrulandı
+├── knowledge.py         hiyerarşik bilgi (piksel→şekil→nesne→sahne→kural)
+├── vsa_agent.py         VSA ajanı (tek-atış kural + tahmin + eleme)
+├── live.py              canlı UI → localhost:8005
+├── REPORT.md            tam rapor · SONUCLAR.json  tam metrikler
+├── solver/              SMT/CEGIS görevi (§18) — predicates/learn/cegis/bisim
+└── *.log                broadtest / vsa_broad koşu kayıtları
+```
+
+---
+
+## 18. SMT + CEGIS + Bisimülasyon görevi (2026-07-25) — solver_gorev.md
+
+> Tam ölçümler: `denme/solver/SONUC.md` · ayarlar: `denme/solver/AYAR.md`
+
+- **FAZ 1 (MaxSAT kural öğrenme): ✅ KABUL GEÇTİ.** vc33'te 6/6 etki, doğruluk
+  0.84–0.98, <0.2sn/kural. KRİTİK BULGU: tek VE-kuralı yetmez — mekanikler AYRIK
+  ("s1 VEYA s2'ye tıkla") → kural LİSTESİ (ardışık kapsama) + polarite şart.
+  `unseparable` sinyali iki ayrı teşhis verdi: form eksiği + gizli durum.
+- **FAZ 2 (CEGIS deney seçimi): ❌ KABUL GEÇEMEDİ.** 0/4 oyunda kazanç, cd82'de
+  seviye kaybı. Yapısal neden: ilk WIN'den önce sömürülecek kural yok; doğru
+  tahmin ≠ daha iyi karar. Ablasyon dersi: sınırsız deney SEVİYE KAYBETTİRİR.
+- **FAZ 3 (makro): şartname kapısı gereği İNŞA EDİLMEDİ** (plan.py = gerekçe).
+- **BİSİMÜLASYON (ek): 0.22 eşiksiz davranışsal denklik — 2/4 oyunda EZDİ:**
+  tn36 %63, r11l %83'e varan daha az aksiyon; ama vc33'te sv2'yi kaybetti
+  (gizli-durumlu oyunda davranış imzası yanıltıcı). Tek kip evrensel değil →
+  sıradaki iş: determinizme göre kip seçen UYARLANIR bisimülasyon.
+- z3 offline wheel hazır (`solver_wheels/`), Kaggle bütçe/timeout korumaları çalışıyor.

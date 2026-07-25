@@ -1,0 +1,505 @@
+{
+  "steps": 1500,
+  "repeat": 2,
+  "games": [
+    "lf52",
+    "m0r0",
+    "ft09"
+  ],
+  "ranked": [
+    [
+      "13_go_explore",
+      {
+        "skor": 42.9,
+        "oyunlar": {
+          "lf52": {
+            "max_level": 0.0,
+            "coverage": 88.0,
+            "events": 49.0,
+            "merges": 0.0,
+            "min_obj": 56.0,
+            "goal_drop": 2.0,
+            "sec": 10.0,
+            "hiz": 149.9
+          },
+          "m0r0": {
+            "max_level": 0.0,
+            "coverage": 214.5,
+            "events": 27.5,
+            "merges": 0.0,
+            "min_obj": 2.0,
+            "goal_drop": 0.0,
+            "sec": 9.15,
+            "hiz": 164.2
+          },
+          "ft09": {
+            "max_level": 0.0,
+            "coverage": 1.0,
+            "events": 2.0,
+            "merges": 0.0,
+            "min_obj": 58.0,
+            "goal_drop": 0.0,
+            "sec": 9.95,
+            "hiz": 150.65
+          }
+        }
+      }
+    ],
+    [
+      "10_novelty_search",
+      {
+        "skor": 40.3,
+        "oyunlar": {
+          "lf52": {
+            "max_level": 0.0,
+            "coverage": 81.0,
+            "events": 49.5,
+            "merges": 0.5,
+            "min_obj": 55.0,
+            "goal_drop": 2.0,
+            "sec": 6.75,
+            "hiz": 221.0
+          },
+          "m0r0": {
+            "max_level": 0.0,
+            "coverage": 101.0,
+            "events": 22.0,
+            "merges": 0.0,
+            "min_obj": 2.0,
+            "goal_drop": 0.0,
+            "sec": 9.0,
+            "hiz": 167.45
+          },
+          "ft09": {
+            "max_level": 0.0,
+            "coverage": 1.0,
+            "events": 1.0,
+            "merges": 0.0,
+            "min_obj": 58.0,
+            "goal_drop": 0.0,
+            "sec": 10.2,
+            "hiz": 146.7
+          }
+        }
+      }
+    ],
+    [
+      "08_thompson",
+      {
+        "skor": 39.6,
+        "oyunlar": {
+          "lf52": {
+            "max_level": 0.0,
+            "coverage": 80.0,
+            "events": 47.0,
+            "merges": 0.0,
+            "min_obj": 55.0,
+            "goal_drop": 3.0,
+            "sec": 6.8,
+            "hiz": 222.0
+          },
+          "m0r0": {
+            "max_level": 0.0,
+            "coverage": 106.0,
+            "events": 22.0,
+            "merges": 0.0,
+            "min_obj": 2.0,
+            "goal_drop": 0.0,
+            "sec": 9.05,
+            "hiz": 166.45
+          },
+          "ft09": {
+            "max_level": 0.0,
+            "coverage": 1.0,
+            "events": 1.0,
+            "merges": 0.0,
+            "min_obj": 58.0,
+            "goal_drop": 0.0,
+            "sec": 10.3,
+            "hiz": 146.2
+          }
+        }
+      }
+    ],
+    [
+      "11_belief_infogain",
+      {
+        "skor": 39.2,
+        "oyunlar": {
+          "lf52": {
+            "max_level": 0.0,
+            "coverage": 85.0,
+            "events": 45.5,
+            "merges": 0.0,
+            "min_obj": 55.0,
+            "goal_drop": 3.0,
+            "sec": 6.75,
+            "hiz": 222.3
+          },
+          "m0r0": {
+            "max_level": 0.0,
+            "coverage": 106.5,
+            "events": 22.0,
+            "merges": 0.0,
+            "min_obj": 2.0,
+            "goal_drop": 0.0,
+            "sec": 9.0,
+            "hiz": 167.1
+          },
+          "ft09": {
+            "max_level": 0.0,
+            "coverage": 1.0,
+            "events": 1.0,
+            "merges": 0.0,
+            "min_obj": 58.0,
+            "goal_drop": 0.0,
+            "sec": 10.25,
+            "hiz": 146.35
+          }
+        }
+      }
+    ],
+    [
+      "01_random",
+      {
+        "skor": 37.9,
+        "oyunlar": {
+          "lf52": {
+            "max_level": 0.0,
+            "coverage": 79.0,
+            "events": 42.5,
+            "merges": 0.0,
+            "min_obj": 55.0,
+            "goal_drop": 3.0,
+            "sec": 6.7,
+            "hiz": 223.85
+          },
+          "m0r0": {
+            "max_level": 0.0,
+            "coverage": 102.0,
+            "events": 22.0,
+            "merges": 0.0,
+            "min_obj": 2.0,
+            "goal_drop": 0.0,
+            "sec": 9.05,
+            "hiz": 165.85
+          },
+          "ft09": {
+            "max_level": 0.0,
+            "coverage": 1.0,
+            "events": 1.0,
+            "merges": 0.0,
+            "min_obj": 58.0,
+            "goal_drop": 0.0,
+            "sec": 10.3,
+            "hiz": 145.25
+          }
+        }
+      }
+    ],
+    [
+      "03_novelty",
+      {
+        "skor": 37.8,
+        "oyunlar": {
+          "lf52": {
+            "max_level": 0.0,
+            "coverage": 79.0,
+            "events": 42.5,
+            "merges": 0.0,
+            "min_obj": 55.0,
+            "goal_drop": 3.0,
+            "sec": 6.8,
+            "hiz": 219.25
+          },
+          "m0r0": {
+            "max_level": 0.0,
+            "coverage": 98.5,
+            "events": 22.0,
+            "merges": 0.0,
+            "min_obj": 2.0,
+            "goal_drop": 0.0,
+            "sec": 9.15,
+            "hiz": 164.2
+          },
+          "ft09": {
+            "max_level": 0.0,
+            "coverage": 1.0,
+            "events": 1.0,
+            "merges": 0.0,
+            "min_obj": 58.0,
+            "goal_drop": 0.0,
+            "sec": 10.35,
+            "hiz": 144.6
+          }
+        }
+      }
+    ],
+    [
+      "02_count_ucb",
+      {
+        "skor": 19.4,
+        "oyunlar": {
+          "lf52": {
+            "max_level": 0.0,
+            "coverage": 64.0,
+            "events": 16.0,
+            "merges": 0.0,
+            "min_obj": 57.0,
+            "goal_drop": 1.0,
+            "sec": 6.7,
+            "hiz": 224.3
+          },
+          "m0r0": {
+            "max_level": 0.0,
+            "coverage": 107.0,
+            "events": 14.0,
+            "merges": 0.0,
+            "min_obj": 2.0,
+            "goal_drop": 0.0,
+            "sec": 9.1,
+            "hiz": 164.35
+          },
+          "ft09": {
+            "max_level": 0.0,
+            "coverage": 1.0,
+            "events": 1.0,
+            "merges": 0.0,
+            "min_obj": 58.0,
+            "goal_drop": 0.0,
+            "sec": 10.35,
+            "hiz": 144.7
+          }
+        }
+      }
+    ],
+    [
+      "06_max_entropy",
+      {
+        "skor": 19.4,
+        "oyunlar": {
+          "lf52": {
+            "max_level": 0.0,
+            "coverage": 64.0,
+            "events": 16.0,
+            "merges": 0.0,
+            "min_obj": 57.0,
+            "goal_drop": 1.0,
+            "sec": 6.6,
+            "hiz": 227.55
+          },
+          "m0r0": {
+            "max_level": 0.0,
+            "coverage": 107.0,
+            "events": 14.0,
+            "merges": 0.0,
+            "min_obj": 2.0,
+            "goal_drop": 0.0,
+            "sec": 8.95,
+            "hiz": 167.85
+          },
+          "ft09": {
+            "max_level": 0.0,
+            "coverage": 1.0,
+            "events": 1.0,
+            "merges": 0.0,
+            "min_obj": 58.0,
+            "goal_drop": 0.0,
+            "sec": 10.2,
+            "hiz": 147.2
+          }
+        }
+      }
+    ],
+    [
+      "09_goal_greedy",
+      {
+        "skor": 19.4,
+        "oyunlar": {
+          "lf52": {
+            "max_level": 0.0,
+            "coverage": 64.0,
+            "events": 16.0,
+            "merges": 0.0,
+            "min_obj": 57.0,
+            "goal_drop": 1.0,
+            "sec": 6.7,
+            "hiz": 223.5
+          },
+          "m0r0": {
+            "max_level": 0.0,
+            "coverage": 107.0,
+            "events": 14.0,
+            "merges": 0.0,
+            "min_obj": 2.0,
+            "goal_drop": 0.0,
+            "sec": 9.0,
+            "hiz": 166.0
+          },
+          "ft09": {
+            "max_level": 0.0,
+            "coverage": 1.0,
+            "events": 1.0,
+            "merges": 0.0,
+            "min_obj": 58.0,
+            "goal_drop": 0.0,
+            "sec": 10.25,
+            "hiz": 146.6
+          }
+        }
+      }
+    ],
+    [
+      "04_efe",
+      {
+        "skor": 13.7,
+        "oyunlar": {
+          "lf52": {
+            "max_level": 0.0,
+            "coverage": 64.0,
+            "events": 11.0,
+            "merges": 0.0,
+            "min_obj": 57.0,
+            "goal_drop": 1.0,
+            "sec": 6.7,
+            "hiz": 224.5
+          },
+          "m0r0": {
+            "max_level": 0.0,
+            "coverage": 65.0,
+            "events": 6.0,
+            "merges": 0.0,
+            "min_obj": 2.0,
+            "goal_drop": 0.0,
+            "sec": 9.05,
+            "hiz": 165.5
+          },
+          "ft09": {
+            "max_level": 0.0,
+            "coverage": 1.0,
+            "events": 1.0,
+            "merges": 0.0,
+            "min_obj": 58.0,
+            "goal_drop": 0.0,
+            "sec": 10.35,
+            "hiz": 144.8
+          }
+        }
+      }
+    ],
+    [
+      "05_curiosity",
+      {
+        "skor": 13.7,
+        "oyunlar": {
+          "lf52": {
+            "max_level": 0.0,
+            "coverage": 64.0,
+            "events": 11.0,
+            "merges": 0.0,
+            "min_obj": 57.0,
+            "goal_drop": 1.0,
+            "sec": 6.65,
+            "hiz": 226.75
+          },
+          "m0r0": {
+            "max_level": 0.0,
+            "coverage": 65.0,
+            "events": 6.0,
+            "merges": 0.0,
+            "min_obj": 2.0,
+            "goal_drop": 0.0,
+            "sec": 8.9,
+            "hiz": 168.5
+          },
+          "ft09": {
+            "max_level": 0.0,
+            "coverage": 1.0,
+            "events": 1.0,
+            "merges": 0.0,
+            "min_obj": 58.0,
+            "goal_drop": 0.0,
+            "sec": 10.25,
+            "hiz": 146.8
+          }
+        }
+      }
+    ],
+    [
+      "07_empowerment",
+      {
+        "skor": 13.7,
+        "oyunlar": {
+          "lf52": {
+            "max_level": 0.0,
+            "coverage": 64.0,
+            "events": 11.0,
+            "merges": 0.0,
+            "min_obj": 57.0,
+            "goal_drop": 1.0,
+            "sec": 6.6,
+            "hiz": 226.15
+          },
+          "m0r0": {
+            "max_level": 0.0,
+            "coverage": 65.0,
+            "events": 6.0,
+            "merges": 0.0,
+            "min_obj": 2.0,
+            "goal_drop": 0.0,
+            "sec": 9.05,
+            "hiz": 165.4
+          },
+          "ft09": {
+            "max_level": 0.0,
+            "coverage": 1.0,
+            "events": 1.0,
+            "merges": 0.0,
+            "min_obj": 58.0,
+            "goal_drop": 0.0,
+            "sec": 10.2,
+            "hiz": 147.25
+          }
+        }
+      }
+    ],
+    [
+      "12_model_plan",
+      {
+        "skor": 13.7,
+        "oyunlar": {
+          "lf52": {
+            "max_level": 0.0,
+            "coverage": 64.0,
+            "events": 11.0,
+            "merges": 0.0,
+            "min_obj": 57.0,
+            "goal_drop": 1.0,
+            "sec": 6.65,
+            "hiz": 226.35
+          },
+          "m0r0": {
+            "max_level": 0.0,
+            "coverage": 65.0,
+            "events": 6.0,
+            "merges": 0.0,
+            "min_obj": 2.0,
+            "goal_drop": 0.0,
+            "sec": 8.95,
+            "hiz": 167.35
+          },
+          "ft09": {
+            "max_level": 0.0,
+            "coverage": 1.0,
+            "events": 1.0,
+            "merges": 0.0,
+            "min_obj": 58.0,
+            "goal_drop": 0.0,
+            "sec": 10.2,
+            "hiz": 147.55
+          }
+        }
+      }
+    ]
+  ]
+}
